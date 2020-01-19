@@ -12,7 +12,8 @@
     'box-button box-map'
     '. box-cam'
     'box-desc box-cam'
-    'box-email box-cam';
+    'box-email box-cam'
+    'box-details box-details';
 }
 
 .box {
@@ -51,6 +52,10 @@
 
 .box-email {
   grid-area: box-email;
+}
+
+.box-details {
+  grid-area: box-details;
 }
 
 #Description{
@@ -113,6 +118,7 @@
     font-weight: 1000;
     text-align: center;
     justify-content: center;
+    text-transform: uppercase;
     font-family: sans-serif;
     color: #4d4d4d;
   }
