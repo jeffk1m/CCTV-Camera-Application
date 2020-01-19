@@ -7,10 +7,12 @@
   grid-template-areas:
     'box-head box-map'
     'box-long box-map'
-    'box-lat box-cam'
-    'box-date box-cam'
+    'box-lat box-map'
+    'box-date box-map'
+    'box-button box-map'
+    '. box-cam'
     'box-desc box-cam'
-    'box-button box-cam';
+    'box-email box-cam';
 }
 
 .box {
@@ -23,6 +25,7 @@
 .box-map {
   grid-area: box-map;
   justify-content: stretch;
+  padding: 20px;
 }
 
 .box-cam {
@@ -35,9 +38,17 @@
 
 }
 
+.box-button {
+  grid-area: box-button;
+}
+
 .box-desc {
   grid-area: box-desc;
 
+}
+
+.box-email {
+  grid-area: box-email;
 }
 
 #Description{
@@ -51,7 +62,7 @@
     margin-right: auto;
     padding: 10px;
     height: 350px;
-    width: 1200px;
+    width: 1170px;
     justify-content: center;
     border-style: solid;
     border-color: #F1F1F1;
@@ -61,6 +72,23 @@
       -12px -12px 12px 0 rgba(255,255,255,0.5),
       12px 12px 12px 0 rgba(0,0,0,0.08);
   }
+
+  #FeedContainer{
+    box-shadow:
+      -12px -12px 12px 0 rgba(255,255,255,0.5),
+      12px 12px 12px 0 rgba(0,0,0,0.08);
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    height: 400px;
+    width: 1250px;
+    border-style: solid;
+    border-color: #F1F1F1;
+    border-width: 30px;
+    border-radius: .80em;
+    border:5px;
+  }
+
   #map{
     height: 100%;
     width: 100%;
@@ -85,21 +113,9 @@
     font-family: sans-serif;
     color: #4d4d4d;
   }
-  #FeedContainer{
-    box-shadow:
-      -12px -12px 12px 0 rgba(255,255,255,0.5),
-      12px 12px 12px 0 rgba(0,0,0,0.08);
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: end;
-    height: 500px;
-    width: 1280px;
-    border-width: 30px;
-    border:5px;
-  }
-
 
   #content{
+    padding: 15px;
     height: 100%;
     width: 100%;
   }
