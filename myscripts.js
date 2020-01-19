@@ -7,6 +7,7 @@ function sendMail() {
              + "&body=" + escape(document.getElementById('myText').value)
              + "Latitude of Crime: " + incidentLat
              + "Longitude of Crime: " + incidentLon
+             + "Date of Crime: " + incidentDate
     ;
 
     window.location.href = link;
@@ -17,7 +18,7 @@ function initMap(){
   //variable for options to be utilized for google maps api
   var incidentLat = document.getElementById("textBoxlat").value;
   var incidentLon = document.getElementById("textBoxlon").value;
-  var incidentDate = document.getElementById("textBoxDate").value;
+  var incidentDate = new Date(document.getElementById("textBoxDate").value).getTime();
   console.log(incidentLat);
   console.log(incidentLon);
 
@@ -33,7 +34,7 @@ function initMap(){
 
   var incident = {
     center:{lat:Number(incidentLat), lng:Number(incidentLon)},
-    timeStamp:new Date(incidentDate).getTime(),
+    timeStamp:incidentDate,
     description:"Black Sedan, Asian American, Headed up I-##",
   }
 
@@ -113,8 +114,8 @@ console.log(incident.timeStamp);
         var d = new Date();
         var currentTime = d.getTime();
         deltaTime = currentTime - timeOccurrence;
-        console.log(deltaTime);
-        searchRadius = deltaTime * 0.00000008;
+        console.log("Delta Time: " + deltaTime);
+        searchRadius = deltaTime * 0.0003;
         //above number not chosen by random, based off of unix time standard
         console.log("Search Radius: " + searchRadius);
         return searchRadius;
