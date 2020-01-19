@@ -10,19 +10,27 @@
     'box-long box-map'
     'box-date box-map'
     'box-button box-map'
-    '. box-cam'
     'box-desc box-cam'
     'box-email box-cam'
-    'box-details box-details';
+    'box-details box-cam';
 }
 
 .box {
   font-family: sans-serif;
-  font-weight: 1000;
   display: grid;
   align-items: center;
   justify-items: center;
   justify-content: center;
+}
+
+.box-lat {
+  grid-area: box-lat;
+  font-weight: 1000;
+}
+
+.box-long {
+  grid-area: box-long;
+  font-weight: 1000;
 }
 
 .box-map {
@@ -38,24 +46,35 @@
 
 .box-date {
   grid-area: box-date;
+  font-weight: 1000;
 
 }
 
 .box-button {
   grid-area: box-button;
+  font-weight: 1000;
+  padding: 5px;
 }
 
 .box-desc {
   grid-area: box-desc;
+  font-weight: 1000;
   text-align: center;
+  padding: 10px;
 }
 
 .box-email {
   grid-area: box-email;
+  font-weight: 1000;
 }
 
 .box-details {
   grid-area: box-details;
+  justify-content: center;
+  align-self: start;
+  text-align: center;
+  padding: 10px;
+
 }
 
 #Description{
