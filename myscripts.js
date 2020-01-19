@@ -4,7 +4,7 @@ function sendMail() {
     var link = "mailto:me@example.com"
              + "?cc=myCCaddress@example.com"
              + "&subject=" + escape("This is my subject")
-             + "&body=" + escape(document.getElementById('Description').value)
+             + "&body=" + escape(document.getElementById('myText').value)
              + "Latitude of Crime: " + incidentLat
              + "Longitude of Crime: " + incidentLon
              + "Date of Crime: " + incidentDate
