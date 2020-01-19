@@ -1,3 +1,56 @@
+input {
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-style: hidden;
+      background-color: #FFFFFF;
+}
+textarea {
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-style: hidden;
+      background-color: #FFFFFF;
+}
+
+#button {
+  background-color: #f1f1f1;
+  border: none;
+  color: black;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+      border-width: 30px;;
+    border-radius: .75em;
+    box-shadow:
+      -4px -4px 4px 0 rgba(255,255,255,0.5),
+      4px 4px 4px 0 rgba(0,0,0,0.08);
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+ 
+}
+
+button {
+  background-color: #f1f1f1;
+  border: none;
+  color: black;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+      border-width: 30px;;
+    border-radius: .75em;
+    box-shadow:
+      -4px -4px 4px 0 rgba(255,255,255,0.5),
+      4px 4px 4px 0 rgba(0,0,0,0.08);
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+ 
+}
+
 .wrapper {
   display: grid;
 }
@@ -5,6 +58,7 @@
 .container {
   display: grid;
   grid-template-areas:
+    'box-logo box-map'
     'box-head box-map'
     'box-lat box-map'
     'box-long box-map'
@@ -21,6 +75,20 @@
   align-items: center;
   justify-items: center;
   justify-content: center;
+  padding: 2.5px;
+}
+
+.box-logo {
+  grid-area: box-logo;
+}
+
+.box-logo img {
+  width: 3.8vw;
+}
+
+.box-head {
+  grid-area: box-head;
+  align-self: start;
 }
 
 .box-lat {
@@ -77,9 +145,25 @@
 
 }
 
+#boxContainer {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    border-style: solid;
+    border-color: #F1F1F1;
+    border-width: 0px;
+    border-radius: .30em;
+    box-shadow:
+      -5px -5px 5px 0 rgba(255,255,255,0.5),
+      5px 5px 5px 0 rgba(0,0,0,0.08);
+}
+
 #Description{
-  height: 17vh;
-  width: 28vw;
+  height: 8vh;
+  width: 20vw;
   text-align: center;
 }
 
@@ -133,11 +217,12 @@
     height: 100%;
   }
   #head{
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 1000;
     text-align: center;
     justify-content: center;
     text-transform: uppercase;
+    padding: 0px;
     font-family: sans-serif;
     color: #4d4d4d;
   }

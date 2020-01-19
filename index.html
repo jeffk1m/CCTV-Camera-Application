@@ -15,32 +15,48 @@
 <body>
 <div class="wrapper">
   <div class="container">
+
+    <div class="box box-logo">
+      <img src="unnamed.png">
+    </div>
     <div class="box box-head">
       <h1 id="head">CCTV Crime Tracker</h1>
     </div>
 
   <div class="box box-lat">
     <label for="Latitude">Latitude:</label>
-    <input type="text" name="lat" id="textBoxlat" placeholder="38.576931°N">
+    <div id="boxContainer">
+      <input type="text" name="lat" id="textBoxlat" placeholder="38.576931°N">
+    </div>
   </div>
 
   <div class="box box-long">
     <label for="Longitude">Longitude</label>
-    <input type="text" name="long" id="textBoxlon" placeholder="-121.494949°W">
+    <div id="boxContainer">
+      <input type="text" name="long" id="textBoxlon" placeholder="-121.494949°W">
+    </div>
   </div>
 
   <div class="box box-date">
     <label for="Date">Date:</label>
-    <input type="text" name="date" id="textBoxDate" placeholder="YYYY.MM.DD">
+    <div id="boxContainer">
+      <input type="text" name="date" id="textBoxDate" placeholder="YYYY.MM.DD">
+    </div>
   </div>
 
-  <div class="box box-button">
+<!--   <div class="box box-button">
     <input type="button" value="Submit" onclick="initMap()">
+  </div> -->
+
+  <div class="box box-button">
+    <button onclick="initMap()">Submit</button>
   </div>
 
   <div class="box box-desc">
     <label for="Date">Description:</label>
+    <div id="boxContainer">
      <textarea id="Description" placeholder="Explain what happened, car make/model, Latitude/Longitude, Date, and any other helpful information..."></textarea>
+   </div>
   </div>
 
   <div class="box box-email">
