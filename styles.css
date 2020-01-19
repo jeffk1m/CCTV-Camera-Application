@@ -6,8 +6,8 @@
   display: grid;
   grid-template-areas:
     'box-head box-map'
-    'box-long box-map'
     'box-lat box-map'
+    'box-long box-map'
     'box-date box-map'
     'box-button box-map'
     '. box-cam'
@@ -16,6 +16,8 @@
 }
 
 .box {
+  font-family: sans-serif;
+  font-weight: 1000;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -25,7 +27,7 @@
 .box-map {
   grid-area: box-map;
   justify-content: stretch;
-  padding: 20px;
+  padding: 25px;
 }
 
 .box-cam {
@@ -44,7 +46,7 @@
 
 .box-desc {
   grid-area: box-desc;
-
+  text-align: center;
 }
 
 .box-email {
@@ -52,10 +54,11 @@
 }
 
 #Description{
-  height: 20vh;
-  width: 30vw;
+  height: 17vh;
+  width: 28vw;
   text-align: center;
 }
+
 
 #mapscontainer{
     margin-left: auto;
@@ -122,12 +125,15 @@
 
 #textBoxlat {
   height: 40px;
+  text-align: center;
 }
 
 #textBoxlon {
   height: 40px;
+  text-align: center;
 }
 
 #textBoxDate {
   height: 40px;
+  text-align: center;
 }
