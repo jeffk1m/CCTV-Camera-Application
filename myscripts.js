@@ -1,18 +1,15 @@
 var cctvinformation = [];
 
 function sendMail() {
+  console.log("Email is sending");
     var link = "mailto:me@example.com"
              + "?cc=myCCaddress@example.com"
              + "&subject=" + escape("This is my subject")
              + "&body=" + escape(document.getElementById('myText').value)
-             + "Latitude of Crime: " + incidentLat
-             + "Longitude of Crime: " + incidentLon
-             + "Date of Crime: " + incidentDate
     ;
 
     window.location.href = link;
 }
-
 
 function initMap(){
   //variable for options to be utilized for google maps api
