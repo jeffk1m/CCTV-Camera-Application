@@ -17,11 +17,12 @@ function initMap(){
   //variable for options to be utilized for google maps api
   var incidentLat = document.getElementById("textBoxlat").value;
   var incidentLon = document.getElementById("textBoxlon").value;
+  var incidentDate = document.getElementById("textBoxDate").value;
   console.log(incidentLat);
   console.log(incidentLon);
 
   var options = {
-    zoom:7,
+    zoom:9,
     center:{lat:38.5449,lng:-121.7405}
   }
 
@@ -32,10 +33,11 @@ function initMap(){
 
   var incident = {
     center:{lat:Number(incidentLat), lng:Number(incidentLon)},
-    timeStamp:1579068995,
+    timeStamp:new Date(incidentDate).getTime(),
     description:"Black Sedan, Asian American, Headed up I-##",
   }
 
+console.log(incident.timeStamp);
 
 
   //Using Jquery to load the .xml file pass the xml data into the success callback functions
