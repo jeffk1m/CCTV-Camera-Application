@@ -21,7 +21,7 @@
 
   <div class="box box-lat">
     <label for="Latitude">Latitude:</label>
-    <input type="text" name="lat" id="textBoxlat" placeholder="38.576931.°N">
+    <input type="text" name="lat" id="textBoxlat" placeholder="38.576931°N">
   </div>
 
   <div class="box box-long">
@@ -38,19 +38,14 @@
     <input type="button" value="Submit" onclick="initMap()">
   </div>
 
-  <textarea id="Description">
-      Lorem ipsum...
-  </textarea>
-  <button onclick="sendMail(); return false">Send</button>
-
-  <!-- <div class="box box-desc">
+  <div class="box box-desc">
     <label for="Date">Description:</label>
-    <input type="text" name="desc" id="Description" placeholder="Explain what happened at the crime scene">
+     <textarea id="Description" placeholder="Explain what happened, car make/model, and any other information..."></textarea>
   </div>
 
   <div class="box box-email">
-    <input type="button" value="Send Email" onclick="initMap()">
-  </div> -->
+      <button onclick="sendMail(); return false">Send Email</button>
+  </div>
 
   <div class="box box-map">
     <div id = "mapscontainer">
