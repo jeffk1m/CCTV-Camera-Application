@@ -25,10 +25,29 @@
     </div>
   </div>
 
-    Latitude: <input type="text" name="lat" id="textBoxlat"><br>
-    Longitude: <input type="text" name="lon" id="textBoxlon"><br>
-    <input type="submit" value="Submit" onclick="initMap()">
+  <div class="box box-long">
+    <label for="Longitude">Longitude</label> 
+    <input type="text" name="long" id="textBoxlon" placeholder="38.5449.°N">
+  </div>
 
+  <div class="box box-lat">
+    <label for="Latitude">Latitude:</label> 
+    <input type="text" name="lat" id="textBoxlat" placeholder="-121.7405°W">
+  </div>
+
+  <div class="box box-date">
+    <label for="Date">Date:</label> 
+    <input type="text" name="date" id="textBoxDate" placeholder="YYYY.MM.DD">
+  </div>
+
+  <div class="box box-desc">
+    <label for="Date">Description:</label> 
+    <input type="text" name="desc" id="Description" placeholder="Explain what happened at the crime scene">
+  </div>
+
+  <div class="box box-button">
+    <input type="button" value="Submit" onclick="initMap()">
+  </div>
 
 
   <div class="box box-cam">
