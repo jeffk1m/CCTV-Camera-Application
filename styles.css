@@ -8,7 +8,9 @@
     'box-head box-map'
     'box-long box-map'
     'box-lat box-cam'
-    'box-desc box-cam';
+    'box-date box-cam'
+    'box-desc box-cam'
+    'box-button box-cam';
 }
 
 .box {
@@ -27,9 +29,23 @@
   grid-area: box-cam;
   justify-content: stretch;
 }
-#textBox{
-  height: 30px;
+
+.box-date {
+  grid-area: box-date;
+
 }
+
+.box-desc {
+  grid-area: box-desc;
+
+}
+
+#Description{
+  height: 20vh;
+  width: 30vw;
+  text-align: center;
+}
+
 #mapscontainer{
     margin-left: auto;
     margin-right: auto;
@@ -87,9 +103,15 @@
     height: 100%;
     width: 100%;
   }
-#textBoxlat{
+
+#textBoxlat {
   height: 40px;
 }
-#textBoxlon{
+
+#textBoxlon {
+  height: 40px;
+}
+
+#textBoxDate {
   height: 40px;
 }
