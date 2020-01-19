@@ -4,7 +4,7 @@
 
 .container {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     'box-head box-map'
     'box-long box-map'
     'box-lat box-cam'
@@ -14,7 +14,7 @@
 .box {
   display: grid;
   align-items: center;
-  justify-items: center; 
+  justify-items: center;
   justify-content: center;
 }
 
@@ -27,7 +27,9 @@
   grid-area: box-cam;
   justify-content: stretch;
 }
-
+#textBox{
+  height: 30px;
+}
 #mapscontainer{
     margin-left: auto;
     margin-right: auto;
@@ -79,10 +81,15 @@
     border-width: 30px;
     border:5px;
   }
-  
-  
+
+
   #content{
     height: 100%;
     width: 100%;
   }
-  
+#textBoxlat{
+  height: 40px;
+}
+#textBoxlon{
+  height: 40px;
+}

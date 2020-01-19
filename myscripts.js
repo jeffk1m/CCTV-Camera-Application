@@ -2,6 +2,11 @@ var cctvinformation = [];
 
 function initMap(){
   //variable for options to be utilized for google maps api
+  var incidentLat = document.getElementById("textBoxlat").value;
+  var incidentLon = document.getElementById("textBoxlon").value;
+  console.log(incidentLat);
+  console.log(incidentLon);
+
   var options = {
     zoom:7,
     center:{lat:38.5449,lng:-121.7405}
@@ -26,6 +31,7 @@ function initMap(){
     dataType: "xml",
     //Upon successful Get request of data execute the following function
     success:function(xml){
+
       var x = xml.documentElement.getElementsByTagName("cctv");
       for (var i = 0; i < x.length; i++) {
         var latTemp = x[i].getElementsByTagName("latitude")[0].childNodes[0].nodeValue;
@@ -136,9 +142,7 @@ function initMap(){
 
 
   //iterates through the potential markers in the table
-  for(var i = 0;i < markers.length;i++){
-    addMarker(markers[i]);
-  }
+
 
   //Sets up the content for the marker
   function addMarker(props){
