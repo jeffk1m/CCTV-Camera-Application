@@ -1,5 +1,18 @@
 var cctvinformation = [];
 
+function sendMail() {
+    var link = "mailto:me@example.com"
+             + "?cc=myCCaddress@example.com"
+             + "&subject=" + escape("This is my subject")
+             + "&body=" + escape(document.getElementById('myText').value)
+             + "Latitude of Crime: " + incidentLat
+             + "Longitude of Crime: " + incidentLon
+    ;
+
+    window.location.href = link;
+}
+
+
 function initMap(){
   //variable for options to be utilized for google maps api
   var incidentLat = document.getElementById("textBoxlat").value;
@@ -18,10 +31,12 @@ function initMap(){
   var cameras = [];
 
   var incident = {
-    center:{lat:38.544907, lng:-121.740517},
+    center:{lat:Number(incidentLat), lng:Number(incidentLon)},
     timeStamp:1579068995,
     description:"Black Sedan, Asian American, Headed up I-##",
   }
+
+
 
   //Using Jquery to load the .xml file pass the xml data into the success callback functions
   $.ajax({
