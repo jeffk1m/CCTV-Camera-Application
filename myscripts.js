@@ -19,6 +19,18 @@ function initMap(){
   console.log(incidentLat);
   console.log(incidentLon);
 
+  function sendMail() {
+    console.log("Email is sending");
+      var link = "mailto:me@example.com"
+               + "?cc=myCCaddress@example.com"
+               + "&subject=" + escape("This is my subject")
+               + "&body=" + escape(document.getElementById('Description').value)
+      ;
+
+      window.location.href = link;
+  }
+
+
   var options = {
     zoom:9,
     center:{lat:38.5449,lng:-121.7405}
